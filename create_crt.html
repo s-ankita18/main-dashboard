@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Certificate</title>
+    <link rel="stylesheet" href="create_crt.css">
+</head>
+<body>
+<!-- -----------Navigation bar----------- -->
+<nav id="navbar">
+    <div id="logo">
+        <img src="kar-logo.png" alt="Kartexa">
+    </div>
+    <ul class="list-item">
+        <li class="item"><a href="">Create Certificate</a></li>
+        <li class="item"><a href="#">View Intern Certificate</a></li>
+        <li class="item"><a href="#">CONTACT US</a></li>
+    </ul>
+</nav>
+<!-- ----------For form details--------- -->
+   <div class="form-box">
+   <h3>Enter Details to get a certificate !</h3>
+
+    <div class="main-box">
+        <form  action="#" method="post">
+
+        <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>    
+        </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="Email" name="email" id="email" placeholder="Enter Email" required> 
+          </div>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" name="role" id="role" placeholder="Enter Role" required>    
+        </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="org">Organization</label>
+            <input type="text" name="org" placeholder="Enter Organization" required>    
+          </div>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="organizer">Organizer </label>
+            <input type="text" name="organizer" placeholder="Enter Organizer" required>    
+          </div>  
+        </div>
+        <div class="col"> 
+          <div class="form-group">
+            <label for="intern">Internship Name</label>
+            <input type="text" name="intern" placeholder="Enter Internship Name" required>
+          </div>
+        </div>
+        </div>
+          
+          <div class="row">
+          <div class="col">
+          <div class="form-group">
+            <label for="inter_from">Internship From</label>
+            <input type="date" name="inter_from" required>
+          </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+            <label for="intern-to">Internship to</label>
+            <input type="date" name="inter_to" required>
+          </div>
+        </div>
+        </div>
+
+          <div class="form-group">
+            <label for="cert-no">Certificate Number</label>
+            <input type="number" name="cert-no" placeholder="Enter Certificate Number">
+          </div>
+          <div class="form-group">
+            <label>Upload Photo</label>
+            <input type="file" id="myFile" name="filename">
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

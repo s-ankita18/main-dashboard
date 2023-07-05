@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Verify Certificate</title>
+    <style>
+        *{
+          box-sizing: border-box;
+         }
+        body{
+          position: relative;
+          font-family: Arial, sans-serif;
+          background-image: url(ver_bg_img2.webp);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          margin: 0;
+          padding: 0;
+         }
+         .result {
+            margin-top: 10px;
+        } 
+        #verify-certificate{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .form-group label{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: block;
+            color: rgb(43, 98, 129);
+        }
+        .form-group .form-control{
+            width: 50%;
+            margin-top: 5px;
+            margin-left: 200px;
+        }
+        .main-box{
+        max-width: 800px;
+        margin: 85px auto;
+        padding: 20px;
+        background-color: #f1efef; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        }
+        h2{
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        img{
+            height: 20%;
+            width: 30%;
+        }
+        .btn{
+            box-sizing: border-box; 
+            padding: 10px; 
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-box">
+    <section id="verify-certificate">
+        <img src="logo2.png" alt="Kartexa">
+        <h2>Verify Certificate</h2>
+        <div class="form-group">
+            <label for="verification-code"><h4>Verification Code</h4></label>
+            <input type="text" class="form-control" id="verification-code" placeholder="Enter Verification Code">
+        </div>
+        <button id="verify-button" class="btn btn-primary btn-lg">Verify</button>
+        <div id="verification-result" class="result"></div>
+    </section>
+</div> 
+   
+    <!-- javascript code if needed -->
+    <script>
+        document.getElementById('verify-button').addEventListener('click', function() {
+            verifyCertificate();
+        });
+        function verifyCertificate() {
+            var verificationCode = document.getElementById('verification-code').value;
+
+            // Retrieve certificate data based on the verification code
+            // Add your logic to retrieve data from storage or a backend
+
+            if (certificateData) {
+                // Display the certificate details
+                showResult('Certificate is valid!', 'success');
+            } else {
+                // Display an error message
+                showResult('Certificate not found!', 'danger');
+            }
+        }
+        function showAlert(message, type) {
+            var alertDiv = document.createElement('div');
+            alertDiv.className = 'alert alert-' + type + ' alert-dismissible';
+            alertDiv.innerHTML = '<button type="button" class="close" data-dismiss="alert">&times;</button>' + message;
+            document.getElementById('verification-result').innerHTML = '';
+            document.getElementById('verification-result').appendChild(alertDiv);
+        }
+        function showResult(message, type) {
+            var resultDiv = document.createElement('div');
+            resultDiv.className = 'alert alert-' + type + ' alert-dismissible';
+            resultDiv.innerHTML = '<button type="button" class="close" data-dismiss="alert">&times;</button>' + message;
+            document.getElementById('verification-result').innerHTML = '';
+            document.getElementById('verification-result').appendChild(resultDiv);
+        }
+    </script>
+</body>
+</html>
